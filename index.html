@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>a testing site</title>
+<script> 
+    function display_c(){
+        var refresh=1000;
+        mytime=setTimeout('display_ct()',refresh)
+    }
+    function display_ct() {
+        var x = new Date()
+        document.getElementById('ct').innerHTML = x;
+        display_c();
+    }
+</script>
+</head>
+<body onload=display_ct();>
+    <p>a testing site</p>
+    <span id='ct' ></span>
+</body>
+</html>                            
