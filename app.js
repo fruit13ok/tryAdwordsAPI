@@ -1,5 +1,6 @@
 console.log("Sanity Check: JS is working!");
-let backendRoute = new URL("http://localhost:8000/api");
+// let backendRoute = new URL("http://localhost:8000/api");
+let backendRoute = new URL("http://138.68.234.14:8000/api3");
 
 const getScrape = async (backendRoute, formObj) => {
     try {
