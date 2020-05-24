@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>a testing site</title>
-<script> 
-    function display_c(){
-        var refresh=1000;
-        mytime=setTimeout('display_ct()',refresh)
-    }
-    function display_ct() {
-        var x = new Date()
-        document.getElementById('ct').innerHTML = x;
-        display_c();
-    }
-</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Scrape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./app.js" defer></script>
+    <meta charset="utf-8">
+    <title>a testing site</title>
+    <script> 
+        function display_c(){
+            var refresh=1000;
+            mytime=setTimeout('display_ct()',refresh)
+        }
+        function display_ct() {
+            var x = new Date()
+            document.getElementById('ct').innerHTML = x;
+            display_c();
+        }
+    </script>
 </head>
 <body onload=display_ct();>
-    <p>a testing site</p>
+    <h5>Do three searchs.</h5>
+    <form id='form1' action="/">
+        Search key1: 
+        <input type="text" name="searchKey1" value="Hydroxychloroquine" style="width:20%;">
+        <br>
+        Search key2:
+        <input type="text" name="searchKey2" value="Warren Buffett" style="width:20%;">
+        <br>
+        Search key3:
+        <input type="text" name="searchKey3" value="three way switch" style="width:20%;">
+    </form>
+    <button id='button1'>Submit</button>
+	<hr>
+    <div id='result-list'></div>
     <span id='ct' ></span>
 </body>
 </html>                            
